@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
+/*Festive*/
+
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+
+/*Tourney*/
+
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap');
+
+/*Josefin Slab*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+
+/*Merienda*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+:root {
+  
+    --border-color: #ffd700;
+    --box-shadow: 0 20px 50px rgb(0 0 0/ 50%);
+    --heading-font: 'Merienda', cursive;
+    --content-font: 'Josefin Slab', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--primary-bg);
+    width: 100vw;
+    height: 200vh;
+    color: #fff;
+ /*   background-image: url(bodybg.jpg);*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary-bg);
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: linear-gradient(#101d2e, #e8d57f, #e8d57f);
+}
+
+
+/*===============Main Content===============*/
+
+header {
+    width: 100vw;
+    margin-top: 40px;
+}
+
+
+/*==========Page Title========*/
+
+#page-title {
+    text-align: center;
+}
+
+#page-title p {
+    margin-top: 54px;
+    font-size: 18px;
+    font-family: 'Lemonada', cursive;
+}
+
+.society-name h1 {
+    position: relative;
+    font-size: 6em;
+    letter-spacing: 7px;
+    color: #115263;
+    text-transform: capitalize;
+    width: 100vw;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    box-sizing: border-box;
+    line-height: 60px;
+    overflow-wrap: break-word;
+    animation: animate 5s linear infinite;
+    font-weight: 600;
+}
+
+@keyframes animate {
+    0%,
+    18%,
+    20%,
+    40%,
+    60.1%,
+    67%,
+    80%,
+    90.1%,
+    92% {
+        color: #115263;
+        text-shadow: none;
+    }
+    18.1%,
+    20.1%,
+    50%,
+    60%,
+    67.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4;
+    }
+}
+
+/*=============Our Departments Section===========*/
+
+#departments {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.dept {
+    width: 100vw;
+    word-break: ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dept h2 {
+    font-size: 30px;
+    color: #5589f2;
+    text-align: center;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    background-color: rgb(16 29 46/ 1);
+    font-family: var(--heading-font);
+    border: 6px solid;
+    border-top-width: 0;
+    border-bottom: 0;
+    border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
+}
+
+
+/*Departments Cards*/
+
+.card-container {
+    margin: 180px 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading_cards {
+    position: absolute;
+}
+
+.heading_cards:nth-child(2) {
+    display: none;
+}
+
+.card {
+    position: absolute;
+    width: 240px;
+    height: 250px;
+    color: #fff;
+    border: 3.2px solid;
+    border-top-width: 0;
+    border-bottom: 0;
+    border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
+    overflow: hidden;
+    transition: .9s ease;
+    background-size: contain;
+    background-position: center;
+}
+
+
+/*       Card Content          */
+
+.card-content {
+    top: 97px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(110px);
+    transform-origin: bottom;
+    font-family: var(--content-font);
+    transition: transform .5s ease;
+}
+
+.card:hover .card-content {
+    transform: translateY(0);
+}
+
+
+/*         Card title        */
+
+.card-title .h1 {
+    width: 100%;
+    font-size: 20px;
+    color: rgb(255 255 255/ 90%);
+    padding: 100% 100% 100% 10px;
+    z-index: 2;
+    font-family: var(--heading-font);
+    text-shadow: 0px 0px 4px #00f;
+    cursor: pointer;
+}
+
+.card-title .h1:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+/*          Card Description          */
+
+.card-description {
+    padding: 10px;
+    transform: translateY(60px);
+    transition: .5s ease;
+}
+
+.card:hover .card-description {
+    transform: translateY(0);
+    transition-delay: .2s;
+}
+
+
+/*            ART CARD        */
+
+#card1 {
+    background: linear-gradient(to bottom, #4443, #000), url(pregnacy.jpg);
+    transition-delay: .2s;
+    background-size: cover;
+}
+
+
+/*            CODING CARD        */
+
+#card2 {
+    background: linear-gradient(to bottom, rgb(0 0 0/1%), rgb(0 0 0 /80%)), url(coding.jpg);
+    transition-delay: .3s;
+    background-size: contain;
+}
+
+
+/*            PHOTOGRAPHY CARD        */
+
+#card3 {
+    background: linear-gradient(to top, rgb(0 0 0/1%), rgb(0 0 0 /50%)), url(pads.jpg);
+    transition-delay: .4s;
+    background-size: cover;
+    background-position: top;
+    /* object-fit: contain; */
+}
+
+
+/*            CREATIVE WRITING CARD        */
+
+#card4 {
+    background: linear-gradient(to bottom, #4443, #000), url(pregnancy.jpg);
+    transition-delay: .5s;
+    background-size: cover;
+}
+
+
+/*            DANCE CARD        */
+
+#card5 {
+    background: linear-gradient(to bottom, #4443, #000), url(entrepre.jpeg);
+    transition-delay: .6s;
+    background-size: contain;
+}
+
+
+/*            MUSIC CARD        */
+
+#card6 {
+    background: linear-gradient(to bottom, #4443, #000), url(busns.jpg);
+    transition-delay: .7s;
+    background-size: contain;
+}
+
+
+/*            FASHION CARD        */
+
+#card7 {
+    background: linear-gradient(to bottom, rgb(0 0 0/1%), rgb(0 0 0 /50%)), url(career.jpg);
+    transition-delay: .8s;
+    background-size: cover;
+}
+
+
+/*            GAMING CARD        */
+
+#card8 {
+    background: linear-gradient(to bottom, #4443, #000), url(oppp11.jpg);
+    transition-delay: .9s;
+    background-size: contain;
+}
+
+
+/*            SOCIETY LOGO CARD        */
+
+#cardL {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 0;
+}
+
+#cardL img {
+    width: 200px;
+    cursor: pointer;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 255, 0.603);
+}
+
+#cardL .circle {
+    z-index: -1;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    border-radius: 90%;
+    background: linear-gradient(to left, rgba(0, 0, 255, 0.842), #102d2e, #102d2e, rgba(255, 255, 0, 0.973));
+    animation: rotateC linear 4s infinite;
+}
+
+@keyframes rotateC {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*            WRAPPER CARD        */
+
+#cardW {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(0 0 0);
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(rgb(255 255 255/ 75%), rgb(0 0 0/ 95%));
+    border: 3px solid;
+    border-top-width: 0;
+    border-bottom: 0;
+    box-shadow: 0 19px 38px rgba(100, 0, 0.30), 0 15px 12px rgba(2, 0, 0, 0.22);
+    border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
+    transition: all 1s ease;
+}
+
+#cardW::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -90px;
+    left: 0;
+    width: 35px;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+    animation: shiny 2.5s ease infinite;
+}
+
+@keyframes shiny {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    78% {
+        transform: scale(0) rotate(45deg);
+    }
+    80% {
+        -webkit-transform: scale(1) rotate(45deg);
+        opacity: 0.5;
+    }
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+#cardW h3 {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#cardW:hover {
+    transform: translateY(-5px);
+    color: #fff;
+    cursor: pointer;
+}
+
+#cardW:hover .card-btn {
+    color: #fff;
+}
+
+#cardW i {
+    color: rgb(255 255 255/ 50%);
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    border: 0;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
